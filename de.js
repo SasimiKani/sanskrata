@@ -50,7 +50,7 @@ function check(ph) {
 		result.innerText = "不正解";
 		result.style.color = "red";
 	}
-	result.innerText += "（" + de_ + "：" + ph + "）";
+	result.innerText += "（" + de_ + "：" + de[de_] + "）";
 	
 	setChar();
 }
