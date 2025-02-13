@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>デーヴァナーガリー練習</title>
+	<meta charset="utf-8">
+	<style>
+	#de {
+		font-size: 72px;
+	}
+	.ph, #result {
+		width: 50px;
+		height: 50px;
+		font-size: 24px;
+	}
+	</style>
+	<script src="de.js"></script>
+</head>
+<body>
+	<div id="main">
+		<div>
+			<input id="de" size="1">
+		</div>
+		<div>
+			<input class="ph" type="submit" onclick="check(this.value); return false;">
+			<input class="ph" type="submit" onclick="check(this.value); return false;">
+			<input class="ph" type="submit" onclick="check(this.value); return false;">
+			<input class="ph" type="submit" onclick="check(this.value); return false;">
+			<input class="ph" type="submit" onclick="check(this.value); return false;">
+		</div>
+		<div>
+			<span id="result"></span>
+		</div>
+	</div>
+	<script>
+	(function() {
+		setChar();
+	})();
+	</script>
+</body>
+</html>
