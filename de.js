@@ -34,7 +34,6 @@ function setChar() {
 	var i = 0;
 	var ph = document.querySelectorAll(".ph");
 	while (options.length > 0) {
-		console.log(options, options.length);
 		ph[i].value = options.splice(parseInt(Math.random()*options.length), 1);
 		i++;
 	}
@@ -53,4 +52,25 @@ function check(ph) {
 	result.innerText += "（" + de_ + "：" + de[de_] + "）";
 	
 	setChar();
+}
+
+function switchTable() {
+	var table = document.querySelector("#table");
+	if (table.style.display == "none") {
+		table.style.display = "flex";
+	} else {
+		table.style.display = "none"
+	}
+}
+function setTable() {
+	for (var i in de_phonetic) {
+		var td = document.querySelector("#v_" + de_phonetic[i]);
+		if (td == null) {
+			td = document.querySelector("#c_" + de_phonetic[i]);
+		}
+		
+		if (td != null) {
+			td.innerText = de_char[i];
+		}
+	}
 }

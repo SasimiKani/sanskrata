@@ -4,12 +4,38 @@
 	<title>デーヴァナーガリー練習</title>
 	<meta charset="utf-8">
 	<style>
+	body {
+		width: 450px;
+	}
+	#main, #de {
+		text-align: center;
+	}
+	#main {
+		height: 200px;
+	}
 	#de {
+		margin-bottom: 10px;
 		font-size: 72px;
 	}
 	.ph, #result {
 		width: 50px;
 		height: 50px;
+		font-size: 24px;
+	}
+	
+	#switch {
+		margin-top: 10px;
+	}
+	#table {
+		display: flex;
+		margin-top: 5px;
+	}
+	table {
+		margin: 10px;
+	}
+	td {
+		width: 30px;
+		text-align: center;
 		font-size: 24px;
 	}
 	</style>
@@ -31,9 +57,86 @@
 			<span id="result"></span>
 		</div>
 	</div>
+	<input id="switch" type="submit" value="文字表を表示" onclick="switchTable(); return false;">
+	<div id="table">
+		<table border="1">
+			<tr>
+				<td id="v_a"></td>
+				<td id="v_ā"></td>
+				<td id="v_i"></td>
+				<td id="v_ī"></td>
+				<td id="v_u"></td>
+				<td id="v_ū"></td>
+			</tr>
+			<tr>
+				<td id="v_ṛ"></td>
+				<td id="v_ṝ"></td>
+				<td id="v_ḷ"></td>
+				<td id="v_ḹ"></td>
+			</tr>
+			<tr>
+				<td id="v_e"></td>
+				<td id="v_ai"></td>
+				<td id="v_o"></td>
+				<td id="v_au"></td>
+			</tr>
+		</table>
+		<table border="1">
+			<tr>
+				<td id="c_k"></td>
+				<td id="c_kh"></td>
+				<td id="c_g"></td>
+				<td id="c_gh"></td>
+				<td id="c_ṅ"></td>
+			</tr>
+			<tr>
+				<td id="c_c"></td>
+				<td id="c_ch"></td>
+				<td id="c_j"></td>
+				<td id="c_jh"></td>
+				<td id="c_ñ"></td>
+			</tr>
+			<tr>
+				<td id="c_ṭ"></td>
+				<td id="c_ṭh"></td>
+				<td id="c_ḍ"></td>
+				<td id="c_ḍh"></td>
+				<td id="c_ṇ"></td>
+			</tr>
+			<tr>
+				<td id="c_t"></td>
+				<td id="c_th"></td>
+				<td id="c_d"></td>
+				<td id="c_dh"></td>
+				<td id="c_n"></td>
+			</tr>
+			<tr>
+				<td id="c_p"></td>
+				<td id="c_ph"></td>
+				<td id="c_b"></td>
+				<td id="c_bh"></td>
+				<td id="c_m"></td>
+			</tr>
+			<tr>
+				<td id="c_y"></td>
+				<td id="c_r"></td>
+				<td id="c_l"></td>
+				<td id="c_v"></td>
+			</tr>
+			<tr>
+				<td id="c_ś"></td>
+				<td id="c_ṣ"></td>
+				<td id="c_s"></td>
+			</tr>
+			<tr>
+				<td id="c_h"></td>
+			</tr>
+		</table>
+	</div>
 	<script>
 	(function() {
 		setChar();
+		setTable();
 	})();
 	</script>
 </body>
